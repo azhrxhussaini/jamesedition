@@ -43,6 +43,41 @@
       color: white;
       padding: 20px 0;
     }
+
+    /* SCROLL CONTAINER STYLE */
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+
+    .van-card {
+      flex: 0 0 auto;
+      width: 300px;
+      scroll-snap-align: start;
+    }
+
+    @media (min-width: 992px) {
+      .scroll-container {
+        flex-wrap: wrap;
+        overflow-x: unset;
+        justify-content: space-between;
+      }
+      .van-card {
+        width: 30%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -56,32 +91,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="supercars.html">Supercars</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="luxury-vans.html">Luxury Vans</a>  
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="yacht.html">Luxury Yachts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact1.html">Contact</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="supercars.html">Supercars</a></li>
+        <li class="nav-item"><a class="nav-link active" href="luxury-vans.html">Luxury Vans</a></li>
+        <li class="nav-item"><a class="nav-link" href="yacht.html">Luxury Yachts</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact1.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-
-  <!-- Hero -->
-  <div id="luxuryHeroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<!-- Hero -->
+<div id="luxuryHeroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="van6.jpg" class="d-block w-100" alt="Luxury Van" style="height: 90vh; object-fit: cover;">
@@ -92,7 +114,8 @@
     </div>
   </div>
 </div>
-  <!-- Luxury Vans Section -->
+
+<!-- Luxury Vans Section -->
 <section class="py-5 bg-light">
   <div class="container">
     <h3 class="text-center fw-bold mb-4">Explore Luxury Vans</h3>
@@ -152,15 +175,12 @@
   </div>
 </section>
 
-  <!-- Footer -->
-  <footer class="text-center">
-    <p class="mb-0">&copy; 2025 LuxuryVans. All rights reserved.</p>
-  </footer>
+<!-- Footer -->
+<footer class="text-center">
+  <p class="mb-0">&copy; 2025 LuxuryVans. All rights reserved.</p>
+</footer>
 
-  <!-- MDB JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+<!-- MDB JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
 </body>
 </html>
-
-
-
