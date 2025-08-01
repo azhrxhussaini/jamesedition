@@ -18,62 +18,41 @@
     body {
       font-family: 'Roboto', sans-serif;
     }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1579078888570-8daff9a78f5f') center center/cover no-repeat;
-      height: 90vh;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
 
-    .hero h1 {
-      background-color: rgba(0,0,0,0.6);
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .card img {
-      height: 220px;
-      object-fit: cover;
-    }
-
-    footer {
-      background-color: #343a40;
-      color: white;
-      padding: 20px 0;
-    }
-
-    /* SCROLL CONTAINER STYLE */
     .scroll-container {
-      display: flex;
       overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      padding: 1rem;
+    }
+
+    .scroll-row {
+      display: inline-flex;
       gap: 1rem;
-      padding-bottom: 1rem;
-      scroll-snap-type: x mandatory;
-    }
-
-    .scroll-container::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    .scroll-container::-webkit-scrollbar-thumb {
-      background: #888;
-      border-radius: 10px;
     }
 
     .van-card {
-      flex: 0 0 auto;
       width: 300px;
-      scroll-snap-align: start;
+      flex-shrink: 0;
+      display: inline-block;
+    }
+
+    .van-card img {
+      height: 200px;
+      object-fit: cover;
     }
 
     @media (min-width: 992px) {
       .scroll-container {
+        overflow: visible;
+        white-space: normal;
+      }
+
+      .scroll-row {
         flex-wrap: wrap;
-        overflow-x: unset;
         justify-content: space-between;
       }
+
       .van-card {
         width: 30%;
       }
@@ -85,100 +64,82 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
   <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="index.html">JAMES EDITION</a>
+    <a class="navbar-brand fw-bold" href="#">JAMES EDITION</a>
     <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav">
       <i class="fas fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="supercars.html">Supercars</a></li>
-        <li class="nav-item"><a class="nav-link active" href="luxury-vans.html">Luxury Vans</a></li>
-        <li class="nav-item"><a class="nav-link" href="yacht.html">Luxury Yachts</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact1.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Luxury Vans</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Hero -->
-<div id="luxuryHeroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="van6.jpg" class="d-block w-100" alt="Luxury Van" style="height: 90vh; object-fit: cover;">
-      <div class="carousel-caption d-none d-md-block">
-        <h1 class="display-4 fw-bold">Travel First Class on Wheels</h1>
-        <p class="lead">Explore luxury vans crafted for elite comfort and style.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Luxury Vans Section -->
 <section class="py-5 bg-light">
   <div class="container">
     <h3 class="text-center fw-bold mb-4">Explore Luxury Vans</h3>
-    <div class="scroll-container px-2">
 
-      <!-- Mercedes-Benz Sprinter -->
-      <div class="card van-card shadow">
-        <img src="van1.jpg" class="card-img-top" alt="Mercedes Sprinter">
-        <div class="card-body">
-          <h5 class="card-title">Mercedes-Benz Sprinter</h5>
-          <p class="card-text">Ultimate executive comfort on wheels.</p>
-          <a href="#" class="btn btn-dark btn-sm" target="_blank">Enquiry</a>
+    <div class="scroll-container">
+      <div class="scroll-row">
+
+        <!-- Van Card 1 -->
+        <div class="card van-card shadow">
+          <img src="van1.jpg" class="card-img-top" alt="Van 1">
+          <div class="card-body">
+            <h5 class="card-title">Mercedes-Benz Sprinter</h5>
+            <p class="card-text">Executive comfort on wheels.</p>
+            <a href="#" class="btn btn-dark btn-sm" target="_blank">Enquiry</a>
+          </div>
         </div>
-      </div>
 
-      <!-- Ford Transit Custom -->
-      <div class="card van-card shadow">
-        <img src="van4.jpg" class="card-img-top" alt="Ford Transit">
-        <div class="card-body">
-          <h5 class="card-title">Ford Transit Custom</h5>
-          <p class="card-text">Versatile van with premium interiors.</p>
-          <a href="#" class="btn btn-primary btn-sm" target="_blank">Enquiry</a>
+        <!-- Van Card 2 -->
+        <div class="card van-card shadow">
+          <img src="van2.jpg" class="card-img-top" alt="Van 2">
+          <div class="card-body">
+            <h5 class="card-title">Ford Transit Custom</h5>
+            <p class="card-text">Versatile van with premium interiors.</p>
+            <a href="#" class="btn btn-primary btn-sm" target="_blank">Enquiry</a>
+          </div>
         </div>
-      </div>
 
-      <!-- Volkswagen Crafter -->
-      <div class="card van-card shadow">
-        <img src="van5.jpg" class="card-img-top" alt="VW Crafter">
-        <div class="card-body">
-          <h5 class="card-title">Volkswagen Crafter</h5>
-          <p class="card-text">German engineering meets van luxury.</p>
-          <a href="#" class="btn btn-info btn-sm" target="_blank">Enquiry</a>
+        <!-- Van Card 3 -->
+        <div class="card van-card shadow">
+          <img src="van3.jpg" class="card-img-top" alt="Van 3">
+          <div class="card-body">
+            <h5 class="card-title">Volkswagen Crafter</h5>
+            <p class="card-text">German engineering meets luxury.</p>
+            <a href="#" class="btn btn-info btn-sm" target="_blank">Enquiry</a>
+          </div>
         </div>
-      </div>
 
-      <!-- Lexus LM -->
-      <div class="card van-card shadow">
-        <img src="van2.jpg" class="card-img-top" alt="Lexus LM">
-        <div class="card-body">
-          <h5 class="card-title">Lexus LM</h5>
-          <p class="card-text">The most luxurious minivan experience.</p>
-          <a href="#" class="btn btn-warning btn-sm" target="_blank">Enquiry</a>
+        <!-- Van Card 4 -->
+        <div class="card van-card shadow">
+          <img src="van4.jpg" class="card-img-top" alt="Van 4">
+          <div class="card-body">
+            <h5 class="card-title">Lexus LM</h5>
+            <p class="card-text">The most luxurious minivan experience.</p>
+            <a href="#" class="btn btn-warning btn-sm" target="_blank">Enquiry</a>
+          </div>
         </div>
-      </div>
 
-      <!-- Toyota Alphard -->
-      <div class="card van-card shadow">
-        <img src="van7.jpg" class="card-img-top" alt="Toyota Alphard">
-        <div class="card-body">
-          <h5 class="card-title">Toyota Alphard</h5>
-          <p class="card-text">Business-class travel for families.</p>
-          <a href="#" class="btn btn-danger btn-sm" target="_blank">Enquiry</a>
+        <!-- Van Card 5 -->
+        <div class="card van-card shadow">
+          <img src="van5.jpg" class="card-img-top" alt="Van 5">
+          <div class="card-body">
+            <h5 class="card-title">Toyota Alphard</h5>
+            <p class="card-text">Business-class travel for families.</p>
+            <a href="#" class="btn btn-danger btn-sm" target="_blank">Enquiry</a>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
 </section>
-
-<!-- Footer -->
-<footer class="text-center">
-  <p class="mb-0">&copy; 2025 LuxuryVans. All rights reserved.</p>
-</footer>
 
 <!-- MDB JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
